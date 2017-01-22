@@ -1,0 +1,56 @@
+/* style.css */
+* {
+    /*border: 1px solid red;*/
+}
+
+body {
+    background: url("../img/background.jpg") no-repeat;
+    background-color: #1b244b;
+    color: white;
+    width: 100%;
+}
+
+header {
+    min-height: 400px;;
+}
+
+footer {
+    margin-top: 15px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.title {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+legals li {
+    display: inline;
+}
+
+.legals a {
+    color: white;
+}
+
+.line {
+    background-color: #0092ca;
+    height: 2px;
+    max-width: 100px;
+    border: none;
+}
+
+.featured-work {
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-outline-secondary {
+    color: white;
+    border-color: white;
+}
