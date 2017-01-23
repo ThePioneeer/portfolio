@@ -72,6 +72,10 @@ ul {
     max-width: 100%;
 }
 
+.work a:hover {
+    text-decoration: none;
+}
+
 .featured-work img {
     min-width: 420px;
     max-width: 420px;
@@ -138,7 +142,7 @@ ul {
   font-size: 17px;
   background-color: transparent;
   color: #FFF;
-  padding: 1em 0;
+  padding: 5.5em 0;
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
