@@ -4,15 +4,16 @@
 }
 
 body {
-    background: url("../img/background.jpg") no-repeat;
-    background-color: #1b244b;
-    color: white;
     width: 100%;
+}
+
+body.home {
+    background-color: #1b244b;
 }
 
 header {
     min-height: 300px;
-    padding-bottom: 6em;
+    display: block;
 }
 
 footer {
@@ -24,15 +25,31 @@ ul {
     padding-left: 0;
 }
 
+.work {
+    margin-top: -5em;
+}
+
+.hero {    
+    background: url("../img/background.jpg") no-repeat center center;
+    height: auto;
+    background-size: cover;
+    padding: 25px 0 200px 0;
+}
+
 .title {
     padding-top: 5em;
+    color: white;
 }
 
-legals li {
-    display: inline;
+.legals-nav a {
+    color: white;
 }
 
-.legals a {
+.legals-social a:hover {
+    text-decoration: none;
+}
+
+.copyrights {
     color: white;
 }
 
@@ -51,8 +68,8 @@ legals li {
 .featured-work {
     overflow: hidden;
     display: block;
-    margin: 0;
     padding: 0;
+    max-width: 100%;
 }
 
 .featured-work img {
