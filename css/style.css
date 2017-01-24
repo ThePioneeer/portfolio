@@ -72,11 +72,17 @@ ul {
 }
 
 .about-me-img {
+    margin-top: 0.5em;
     max-height: 500px;
 }
 
 .work {
-    margin-top: -5em;
+    margin-top: -7em;
+    padding-top: 2em;
+}
+
+.contact {
+    padding-top: 2em;
 }
 
 .hero {    
@@ -131,6 +137,17 @@ ul {
     min-width: 420px;
     max-width: 420px;
     max-height: 200px;
+}
+
+.form-group {
+    margin: 0;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #18BC9C;
+    border-color: #18BC9C;
+    font-weight: 700;
 }
 
 .learn-more-btn {
