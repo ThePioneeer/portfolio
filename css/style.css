@@ -63,7 +63,6 @@ ul {
 }
 
 .about {
-    margin-top: 4em;
     background-color: #18BC9C;
     padding: 2em 0 2em 0;
 }
@@ -81,6 +80,7 @@ ul {
 .work {
     margin-top: -7em;
     padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 .contact {
