@@ -52,7 +52,9 @@ header {
 }
 
 footer {
-    margin-top: 5em;
+    margin-top: 3em;
+    padding-top: 2em;
+    background-color: #18BC9C; 
 }
 
 ul {
