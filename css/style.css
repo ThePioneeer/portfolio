@@ -1,45 +1,13 @@
 /* style.css */
-* {
-    /*border: 1px solid red;*/
-}
 
 html {
-    font-family: "Varela Round", sans-serif;
+    font-family: "Raleway", sans-serif;    
+    color: #fff;      
 }
 
 body {
-    font-family: "Varela Round", sans-serif;
-    width: 100%;
-}
-
-h1, h2, h3, p {
-    color: #fff;    
-}
-
-h1 {
-    line-height: 1.2em;
-    font-weight: 600;
-    font-family: "Raleway";
-    letter-spacing: 6px;
-    font-size: 42px;
-}
-
-h2 {
-    line-height: 1.2em;
-    font-weight: 600;
-    font-family: inherit;
-    letter-spacing: 4px;
-    font-size: 24px;
-    margin-bottom: 1em;
-}
-
-h3 {
-    font-size: 15px;
-    font-family: inherit;
-    font-weight: 500;
-    letter-spacing: 3px;
-    line-height: 1,1;
-    margin: 0.83em;
+    font-family: "Raleway", sans-serif;
+    color: #fff;      
 }
 
 body.home {
@@ -55,6 +23,34 @@ footer {
     margin-top: 3em;
     padding-top: 2em;
     background-color: #18BC9C; 
+    font-weight: 500;
+}
+
+h1 {
+    line-height: 1.2em;
+    font-weight: 600;
+    letter-spacing: 6px;
+    font-size: 42px;
+}
+
+h2 {
+    line-height: 1.2em;
+    font-weight: 600;
+    letter-spacing: 4px;
+    font-size: 24px;
+    margin-bottom: 1em;
+}
+
+h3 {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    line-height: 1,1;
+    margin: 0.83em;
+}
+
+p {
+    font-weight: 500;
 }
 
 ul {
@@ -78,7 +74,7 @@ ul {
 }
 
 .work {
-    margin-top: -7em;
+    margin-top: -12em;
     padding-top: 2em;
     padding-bottom: 2em;
 }
@@ -91,7 +87,7 @@ ul {
     background: url("../img/background2.jpg") no-repeat center center;
     height: auto;
     background-size: cover;
-    padding: 25px 0 200px 0;
+    padding: 2em 0 25em 0;
 }
 
 .title {
@@ -125,10 +121,7 @@ ul {
 }
 
 .featured-work {
-    overflow: hidden;
-    display: block;
     padding: 0;
-    max-width: 100%;
 }
 
 .work a:hover {
@@ -136,9 +129,7 @@ ul {
 }
 
 .featured-work img {
-    min-width: 420px;
-    max-width: 420px;
-    max-height: 200px;
+    max-height: 300px;
 }
 
 .form-group {
