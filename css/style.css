@@ -149,13 +149,15 @@ ul {
     border-radius: 3px;
     text-decoration: none;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 600;    
+    transition: border-color 0.4s;
 }
 
 .learn-more-btn:hover {
     border-color:#0092ca;
     text-decoration: none;
     color: #fff;
+    transition: border-color 0.4s;
 }
 
 .hovereffect {
