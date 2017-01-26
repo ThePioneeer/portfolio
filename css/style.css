@@ -98,6 +98,30 @@ ul {
     margin-bottom: 0;
 }
 
+@media (min-width:768px)
+{
+    .navbar-nav {
+        float:none;
+        margin:0 auto;
+        display: block;
+        text-align: center;
+    }
+}
+
+@media (min-width:768px)
+{
+    .navbar-nav > li {
+        display: inline-block;
+        float:none;
+    }
+}
+
+.navbar a {
+    font-weight: 600;
+}
+
+.navbar
+
 .legals-nav a {
     color: white;
 }
