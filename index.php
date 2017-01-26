@@ -1,3 +1,44 @@
+<?php
+    if (isset($_POST["submit"])) {
+        $name = $_POST["name"];
+        $email = $_POST["e-mail"];
+        $message = $_POST["message"];
+        $human = intval($_POST["human"]);
+        $from = "Portfolio site";
+        $to = "ukomelis56@gmail.com";
+        $subject = "Portfoli contact message";
+
+        $body = "From: $name\n E-mail: $email\n Message:\n $message";
+    
+
+        //From validation
+        if(!$_POST["name"]) {
+            $errName = "Please enter your name";
+        }
+
+        if(!$_POST['e-mail'] || !filter_var($_POST['e-mail'], FILTER_VALIDATE_EMAIL)) {
+            $errEmail = "Please enter a valid email address";
+        }
+
+        if(!$_POST["message"]) {
+            $errMessage = "Please enter a message";
+        }
+
+        if($human != 5) {
+            $errHuman = "Your anti-spam is incorrect";
+        }
+
+        //If no errors, send the email
+        if(!$errName && !$errEmail && !$errMessage && !$errHuman) {
+            if (mail($to, $subject, $body, $from)) {
+                $result = "<div class='alert alert-success'>Thank you! I will be in touch!</div>";
+            } else {
+                $result = "<div class='alert alert-danger'>Sorry there was an error sending your message. Please try again later</div>";
+            }
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -150,32 +191,36 @@
                         <form name="sendMessage" role="form" method="POST" action="index.php" id="contactForm" class="error">
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
-                                    <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="PLease enter your name" aria-invalid="false">
-                                    <p class="help-block text-danger"></p>
+                                    <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name" aria-invalid="false">
+                                    <?php if(isset($_POST["submit"])){echo "<p class='help-block text-danger'>$errName</p>";}?>
                                 </div>
                             </div>
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
-                                    <input type="text" class="form-control" placeholder="E-mail" id="email" required data-validation-required-message="Please enter your email address" aria-invalid="false">
-                                    <p class="help-block text-danger"></p>
+                                    <input type="text" class="form-control" placeholder="E-mail" id="email"  data-validation-required-message="Please enter your email address" aria-invalid="false">
+                                    <?php if(isset($_POST["submit"])){echo "<p class='help-block text-danger'>$errEmail</p>";}?>
                                 </div>
                             </div>
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
-                                    <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message." aria-invalid="false"></textarea>
-                                    <p class="help-block text-danger"></p>
+                                    <textarea rows="5" class="form-control" placeholder="Message" id="message"  data-validation-required-message="Please enter a message." aria-invalid="false"></textarea>
+                                    <?php if(isset($_POST["submit"])){echo "<p class='help-block text-danger'>$errMessage</p>";}?>
                                 </div>
                             </div>
                             <div class="row control-group">
                                 <div class="form-group col-xs-3 floating-label-form-group controls">
                                     <input type="text" class="form-control" id="human" name="human" placeholder="2 + 3 = ?" required data-validation-required-message="Please enter an answer.">
-                                    <p class="help-block text-danger"></p>
+                                    <?php if(isset($_POST["submit"])){echo "<p class='help-block text-danger'>$errHuman</p>";}?>
                                 </div>
                             </div>
-                            <div id="success"></div>
                             <div class="row">
                                 <div class="form-group col-xs-12">
                                     <button type="submit" class="btn btn-success">Send</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-xs-12">
+                                    <?php if(isset($_POST["submit"])){echo $result;}?>
                                 </div>
                             </div>
                         </form>
