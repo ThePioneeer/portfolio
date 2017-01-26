@@ -94,6 +94,10 @@ ul {
     color: white;
 }
 
+.navbar {
+    margin-bottom: 0;
+}
+
 .legals-nav a {
     color: white;
 }
@@ -157,7 +161,7 @@ ul {
     border-color:#0092ca;
     text-decoration: none;
     color: #fff;
-    transition: border-color 0.4s;
+    transition: border-color 0.35s;
 }
 
 .hovereffect {
@@ -168,6 +172,11 @@ ul {
   position: relative;
   text-align: center;
   cursor: default;
+}
+
+.overlay a:hover {
+    transition: color 0.35s;
+    color: #0092ca;
 }
 
 .hovereffect .overlay {
